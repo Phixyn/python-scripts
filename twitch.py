@@ -18,8 +18,7 @@ TWITCH_API = 'http://api.twitch.tv/api/{0}'
 TWITCH_USHER = 'http://usher.twitch.tv/api/{0}'
 # TWITCH_KRAKEN = 'https://api.twitch.tv/kraken/{0}'
 RAN = random.randint(0,1E7)
-# testChannel = 'pamcakes'
-testChannel = 'luxxbunny'
+testChannel = 'phixyn'
 
 # m3u8 protocol bla
 #
