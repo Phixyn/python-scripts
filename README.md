@@ -1,5 +1,7 @@
 # Various Python Scripts
 
+![](https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7-blue.svg)
+
 A set of handy scripts. Written in Python 3 with 💜
 
 Send requests via Twitter: [@Phixyn](https://twitter.com/Phixyn).
