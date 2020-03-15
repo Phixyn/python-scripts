@@ -29,6 +29,12 @@ Transposes the contents of a CSV file and saves the output to a new file.
 ./CSV_Transpose.py --add-quotes Input.csv Output.csv
 ```
 
+## URL Markify
+
+Generates a nicely formatted website link in Markdown syntax. For example:
+
+`[Phixyn - Blog](https://phixyn.com/blog)`
+
 ## Python Twitch URL Grabber [broken]
 
 Grabs HLS stream links from live Twitch.tv channels, so that they can be opened with a media player such as VLC.
