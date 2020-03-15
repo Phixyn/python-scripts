@@ -35,6 +35,8 @@ Generates a nicely formatted website link in Markdown syntax. For example:
 
 `[Phixyn - Blog](https://phixyn.com/blog)`
 
+This script requires third-party modules listed in `requirements.txt`. These can be quickly installed using `pip install -r requirements.txt` globally or in a virtual environment.
+
 ## Python Twitch URL Grabber [broken]
 
 Grabs HLS stream links from live Twitch.tv channels, so that they can be opened with a media player such as VLC.
