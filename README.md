@@ -31,11 +31,23 @@ Transposes the contents of a CSV file and saves the output to a new file.
 
 ## URL Markify
 
+> Usage: ./url_markify.py
+
 Generates a nicely formatted website link in Markdown syntax. For example:
 
 `[Phixyn - Blog](https://phixyn.com/blog)`
 
 This script requires third-party modules listed in `requirements.txt`. These can be quickly installed using `pip install -r requirements.txt` globally or in a virtual environment.
+
+## Markdown File Generator
+
+> Usage: ./generate_md_wiki_file.py
+
+Generates a Markdown file for use with Simiki or similar wikis, based on a template. Handles YAML metadata generation.
+
+This is mostly for personal use, but feel free to use if you want a pretty Markdown file with some YAML metadata!
+
+Here's an example of what gets generated: [https://github.com/Phixyn/mwiki/blob/master/template.md](https://github.com/Phixyn/mwiki/blob/master/template.md)
 
 ## Python Twitch URL Grabber [broken]
 

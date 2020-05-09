@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Generates a Markdown file for use in Simiki or similar wikis,
-based on a template. Includes YAML metadata generation.
+"""Generates a Markdown file for use with Simiki or similar wikis,
+based on a template. Handles YAML metadata generation.
 
 Mostly for personal use, but feel free to use if you want a pretty
 Markdown file with some YAML metadata!
@@ -21,8 +21,24 @@ import sys
 import time
 
 
-def build_yaml_list(list_string):
-    """Takes a comma-separated string and splits it into a YAML list."""
+def make_yaml_list(list_string):
+    """Takes a comma-separated string and converts it into a YAML list.
+
+    Args:
+        list_string (str): A comma-separated string. Extra spacing is
+            stripped after splitting.
+
+    Returns:
+        A string containing a YAML list.
+
+    Examples:
+        If `list_string` is "cats, dogs, foxes", it becomes:
+          - cats
+          - dogs
+          - foxes
+
+        This is returned as: "\n  - cats\n  - dogs\n  - foxes".
+    """
     # This is where the YAML list item goes okay, don't judge my naming pls
     temp_list = []
     for metadata in list_string.split(","):
@@ -31,7 +47,11 @@ def build_yaml_list(list_string):
 
 
 def build_yaml_metadata():
-    """Generates the document's YAML metadata based on the user's input."""    
+    """Generates the document's YAML metadata based on the user's input.
+
+    Returns:
+        An OrderedDict containing the complete YAML metadata.
+    """
     yaml_dict = OrderedDict()
 
     print("[INFO] To build your document's metadata, fill these in.")
@@ -49,18 +69,17 @@ def build_yaml_metadata():
         if "," not in category_input:
             yaml_dict["category"] = category_input.strip()
         else:
-            yaml_dict["categories"] = build_yaml_list(category_input)
+            yaml_dict["categories"] = make_yaml_list(category_input)
 
     tags_input = input("> Tags (comma separated): ")
     if tags_input:
         if "," not in tags_input:
             yaml_dict["tag"] = f"\n  - {tags_input.strip()}"
         else:
-            yaml_dict["tag"] = build_yaml_list(tags_input)
+            yaml_dict["tag"] = make_yaml_list(tags_input)
 
     yaml_dict["layout"] = input("> Layout (default: page): ") or "page"
 
-    # return "".join([f"{k}: {v}\n" for k, v in yaml_dict.items() if v])
     return yaml_dict
 
 
