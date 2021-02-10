@@ -11,7 +11,7 @@ To-Do:
 
 
 __author__ = "Phixyn"
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 
 from collections import OrderedDict
@@ -74,9 +74,9 @@ def build_yaml_metadata():
     tags_input = input("> Tags (comma separated): ")
     if tags_input:
         if "," not in tags_input:
-            yaml_dict["tag"] = f"\n  - {tags_input.strip()}"
+            yaml_dict["tags"] = f"\n  - {tags_input.strip()}"
         else:
-            yaml_dict["tag"] = make_yaml_list(tags_input)
+            yaml_dict["tags"] = make_yaml_list(tags_input)
 
     yaml_dict["layout"] = input("> Layout (default: page): ") or "page"
 
