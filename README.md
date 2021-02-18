@@ -1,10 +1,8 @@
 # Various Python Scripts
 
-![](https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7-blue.svg)
+![Python 3 Support](https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7%20%7C%203.8-blue.svg)
 
-A set of handy scripts. Written in Python 3 with 💜
-
-Send requests via Twitter: [@Phixyn](https://twitter.com/Phixyn).
+A set of handy Python scripts.
 
 ## CSV To JSON
 
@@ -35,7 +33,7 @@ Transposes the contents of a CSV file and saves the output to a new file.
 
 Generates a nicely formatted website link in Markdown syntax. For example:
 
-`[Phixyn - Blog](https://phixyn.com/blog)`
+`[About - Phixyn](https://phixyn.com/about)`
 
 This script requires third-party modules listed in `requirements.txt`. These can be quickly installed using `pip install -r requirements.txt` globally or in a virtual environment.
 
@@ -49,8 +47,6 @@ This is mostly for personal use, but feel free to use if you want a pretty Markd
 
 Here's an example of what gets generated: [https://github.com/Phixyn/mwiki/blob/master/template.md](https://github.com/Phixyn/mwiki/blob/master/template.md)
 
-## Python Twitch URL Grabber [broken]
+## Python Twitch URL Grabber - Outdated
 
-Grabs HLS stream links from live Twitch.tv channels, so that they can be opened with a media player such as VLC.
-
-* [SCRUM Board on Taiga.io](https://tree.taiga.io/project/phixyn-twitch-url-grabber/)
+Grabs HLS stream links from live Twitch.tv channels, so that they can be opened with a media player such as VLC. This is currently outdated.
